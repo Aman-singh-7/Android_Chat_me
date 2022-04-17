@@ -10,105 +10,95 @@
 
     <TextView
 
-        android:id="@+id/login_page_tv"
+        android:id="@+id/main_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/login_head_tv"
         android:height="18dp"
+        android:text="@string/login_head_tv"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.116" />
+
+    <com.hbb20.CountryCodePicker
+
+        android:id="@+id/ccp"
+        android:layout_width="243dp"
+        android:layout_height="45dp"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="false"
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176"
+        android:background="@color/white"
+
+
+        />
+
 
     <TextView
+        android:id="@+id/notice_carrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Carrier charges may apply"
         android:textColor="@color/white"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.353" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="15dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
-
-    <com.firebase.ui.auth.ui.phone.CountryListSpinner
-        android:id="@+id/country_list"
-        android:gravity="center"
-        android:hint="India"
-        android:textSize="18dp"
-        android:layout_width="260dp"
+    <EditText
+        android:id="@+id/country_code"
+        android:inputType="phone"
+        android:layout_width="60dp"
         android:layout_height="45dp"
-        android:minWidth="60dp"
-        android:minHeight="50dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
         android:backgroundTint="@color/Jade"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.275" />
 
     <EditText
-        android:id="@+id/country_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="60dp"
-        android:minHeight="20dp"
-        android:backgroundTint="@color/Jade"
-        android:hint="+91"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
-
-    <EditText
         android:id="@+id/phone_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/Jade"
         android:hint="Phone Number"
-        android:minWidth="180dp"
-        android:minHeight="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:backgroundTint="@color/Jade"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintHorizontal_bias="0.658"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.275" />
 
     <Button
         android:id="@+id/login_signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login/Signup"
         android:backgroundTint="@color/Jade"
+        android:text="NEXT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_number"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintVertical_bias="0.746" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

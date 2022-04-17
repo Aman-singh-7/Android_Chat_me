@@ -24,7 +24,7 @@ public class launcherActivity extends AppCompatActivity {
 
         if(mFirebaseAuth.getCurrentUser()==null)
         {
-            startActivity(new Intent(this, phoneNumberLogin.class));
+            startActivity(new Intent(this, agreementActivity.class));
 
         }else
         {

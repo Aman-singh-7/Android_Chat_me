@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otpActivity">
+
+    <EditText
+
+        android:id="@+id/otp_et"
+        android:layout_width="182dp"
+        android:layout_height="48dp"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:id="@+id/verify_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:minWidth="100dp"
+        android:text="verify otp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/resend_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+           <TextView
+               android:id="@+id/resend_OTP_TV"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Resend OTP"
+               android:textSize="25sp"
+               android:gravity="center"
+               android:layout_weight="1"
+
+               />
+           <TextView
+               android:id="@+id/resend_Timer"
+               android:text="00:00"
+               android:textSize="25sp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="2"
+               android:gravity="right"
+               android:paddingRight="15dp"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="381dp" />
+        <LinearLayout
+            android:id="@+id/callme_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/callme_TV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:text="Call Me"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/call_Timer"
+                android:text="00:00"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:paddingRight="15dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="OTP has been sent to your device"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

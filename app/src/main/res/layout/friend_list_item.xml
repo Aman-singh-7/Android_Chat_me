@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="40dp">
+        <ImageView
+            android:id="@+id/friend_image"
+            android:src="@mipmap/ic_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/friend_layout"
+        android:paddingLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_gravity="center_vertical"
+            android:text="Shyam"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"/>
+        <TextView
+            android:id="@+id/friend_status"
+            android:text="Hey There!I'm using Chat me"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

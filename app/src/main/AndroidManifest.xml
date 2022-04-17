@@ -3,6 +3,9 @@
     package="np.com.amansingh.chatme">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -11,10 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatMe">
         <activity
+            android:name=".ChatRoom.ChatRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".friendList.friendListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".otpActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.launcherActivity"
-            android:theme="@style/Theme.SplashScreen"
             android:exported="true"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:theme="@style/Theme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,15 +42,13 @@
         <activity
             android:name=".phoneNumberLogin"
             android:exported="false"
-            android:noHistory="true"/>
+            android:noHistory="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ChatMe.NoActionBar"
-            android:noHistory="true">
-
-        </activity>
+            android:noHistory="true"
+            android:theme="@style/Theme.ChatMe.NoActionBar" />
     </application>
 
 </manifest>

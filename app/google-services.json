@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1027930535287-cbmo47n5ml5stiieguvcd9q1vailfrp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "np.com.amansingh.chatme",
+            "certificate_hash": "a74d7963d1300f739900551511a0acf999de9aed"
+          }
+        },
+        {
           "client_id": "1027930535287-s9ramiicg7hlmus5528vp6dpdc9uv1b5.apps.googleusercontent.com",
           "client_type": 3
         }
