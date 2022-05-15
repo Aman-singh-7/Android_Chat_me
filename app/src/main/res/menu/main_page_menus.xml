@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
 <item
     android:id="@+id/search_button"
     app:showAsAction="always"
     android:icon="@drawable/ic_baseline_search_24"
-    android:title="search" />
+    android:title="search"
+    />
     <item
-        android:id="@+id/app_setting"
+        android:id="@+id/profile_edit"
         app:showAsAction="never"
-        android:title="Settings"
-
+        android:title="Edit Profile"
         />
     <item
         android:id="@+id/logout"
         app:showAsAction="never"
         android:title="Logout"/>
+    <item android:id="@+id/user_profile"
+        app:showAsAction="never"
+        android:title="testing"
+        />
 </menu>

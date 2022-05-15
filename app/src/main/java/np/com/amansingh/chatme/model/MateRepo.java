@@ -3,14 +3,12 @@ package np.com.amansingh.chatme.model;
 import android.app.Application;
 import android.content.ContentResolver;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.provider.ContactsContract;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,6 +17,7 @@ import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
@@ -33,7 +32,7 @@ public class MateRepo
     private  ArrayList<friends> friendsList;
     private mateDAO mateDao;
     private ExecutorService service;
-
+    private HashMap<String,String > contactMap;
     private LiveData<List<Mates>> getMateList;
 
     public MateRepo(Application application) {
@@ -42,10 +41,11 @@ public class MateRepo
         service= Executors.newSingleThreadExecutor();
         getMateList=mateDao.getAll();
         friendsList=new ArrayList<>();
+        contactMap=new HashMap<>();
     }
 
     public  interface  fetchContactCallback<T>{
-        void onComplete(ArrayList<friends> list);
+        void onComplete(HashMap<String, String> list);
 
     }
 
@@ -68,16 +68,28 @@ public class MateRepo
                 while (!cursor.isClosed()&&cursor.moveToNext())
                 {
                     friendsList.add(new friends(cursor.getString(0),cursor.getString(1)));
+                    contactMap.put(cursor.getString(1),cursor.getString(0));
                 }
 
                 cursor.close();
             }
 
         });
-        callback.onComplete(friendsList);
+        callback.onComplete(contactMap);
         
     }
-
+    public boolean isInContact(@NonNull String phone,ContentResolver cr,fetchContactCallback callback)
+    {
+        if(contactMap==null)
+        {
+            fetchContact(cr,callback);
+        }
+        if(contactMap.containsKey(phone)||contactMap.containsKey(phone.substring(phone.length()-10,phone.length()-1)))
+        {
+            return  true;
+        }
+        return  false;
+    }
 
 
     public Mates findFriend(@NonNull String key)

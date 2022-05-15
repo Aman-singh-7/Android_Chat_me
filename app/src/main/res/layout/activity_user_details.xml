@@ -4,14 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserDetailsActivity"
+    tools:context=".activities.DetailsFillUpActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_marginTop="65dp">
     <androidx.cardview.widget.CardView
+       android:id="@+id/image_card"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:cardCornerRadius="100dp">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"/>
 
         <ImageView
             android:id="@+id/profile"

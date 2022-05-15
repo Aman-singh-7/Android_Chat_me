@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".phoneNumberLogin"
-    android:background="@color/chatmeBG_dark"
+    tools:context=".activities.phoneNumberLogin"
+    android:background="@color/white"
     >
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:height="18dp"
         android:text="@string/login_head_tv"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -38,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.176"
         android:background="@color/white"
+        android:foregroundTint="@color/black"
 
 
         />
@@ -48,14 +49,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Carrier charges may apply"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintVertical_bias="0.346" />
 
     <EditText
         android:id="@+id/country_code"
@@ -63,7 +64,8 @@
         android:layout_width="60dp"
         android:layout_height="45dp"
         android:backgroundTint="@color/Jade"
-        android:textColorHint="@color/white"
+        android:foregroundTint="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.21"
@@ -78,7 +80,7 @@
         android:layout_height="45dp"
         android:backgroundTint="@color/Jade"
         android:hint="Phone Number"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

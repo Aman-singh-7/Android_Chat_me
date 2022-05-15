@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/Jade</item>
         <item name="colorPrimaryVariant">@color/Jade</item>
         <item name="colorOnPrimary">@color/chatmeBG_dark</item>
+        <item name="android:textColorPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/Jade</item>
         <item name="colorSecondaryVariant">@color/Jade</item>

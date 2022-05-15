@@ -5,12 +5,16 @@
         <item name="colorPrimary">@color/Jade</item>
         <item name="colorPrimaryVariant">@color/Jade</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/Jade</item>
         <item name="colorOnSecondary">@color/chatmeBG_dark</item>
+        <item name="android:textColorSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="itemTextColor">@color/black</item>
+
         <!-- Customize your theme here. -->
     </style>
 
@@ -19,7 +23,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.ChatMe.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ChatMe.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="Theme.ChatMe.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 

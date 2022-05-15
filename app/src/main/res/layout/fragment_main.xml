@@ -5,12 +5,20 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.PlaceholderFragment">
+    tools:context=".ui.main.fragments.PlaceholderFragment"
+    android:paddingTop="15dp"
+    android:paddingRight="8dp">
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rv_friends_chats"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+       android:layout_height="match_parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:listitem="@layout/rv_chat_items"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import np.com.amansingh.chatme.R;
+import np.com.amansingh.chatme.ui.main.fragments.PlaceholderFragment;
+import np.com.amansingh.chatme.ui.main.fragments.callsFragment;
+import np.com.amansingh.chatme.ui.main.fragments.chatListFragment;
+import np.com.amansingh.chatme.ui.main.fragments.statusFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -30,7 +34,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         if(position==0)
-        return PlaceholderFragment.newInstance(position + 1);
+             return chatListFragment.newInstance();
         else if(position==1)
             return  statusFragment.newInstance();
         else
